@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.utils import timezone
+from django.shortcuts import redirect
 from .models import Post
 from django.shortcuts import render, get_object_or_404
 from .templates.blog.forms import PostForm
+#from blog.templates.blog.forms import ImageForm
 
 
 def post_list(request):
@@ -41,3 +43,16 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+# def image_upload_view(request):
+#     """Process images uploaded by users"""
+#     if request.method == 'POST':
+#         form = ImageForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             form.save()
+#             # Get the current instance object to display in the template
+#             img_obj = form.instance
+#             return render(request, 'blog/post_edit.html', {'form': form, 'img_obj': img_obj})
+#     else:
+#         form = ImageForm()
+#     return render(request, 'blog/post_edit.html', {'form': form})
