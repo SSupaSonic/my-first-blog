@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #ff9400;
+    background-color: #041321;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -11,11 +11,11 @@
 }
 
 .content {
-    margin-left: 40px;
+    margin-left: 60px;
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: system-ui;
 }
 
 :root {
@@ -43,7 +43,11 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.1)
 }
 
 .post h1 a, .post h1 a:visited {
